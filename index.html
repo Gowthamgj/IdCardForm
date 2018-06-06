@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    
+    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EmployeeIdForm</title>
+</head>
+<body>
+    <h1 id="header">Employee ID Card Form</h1>
+    <form novalidate>
+        <label for="firstname">First Name</label>
+        <input type="text" name="firstname" id="firstname">
+        <span id="firstNameError" class="spanHide"></span>
+        <br><br>
+        <label for="fullname">Full Name</label>
+        <input type="text" name="fullname" id="fullname">
+        <span id="fullNameError" class="spanHide"></span>
+        <br><br>
+        <label for="desination">Designation</label>
+        <select name="designation" id="designation">
+            <option value=""></option>
+            <option value="Associate Engineer">Associate Engineer</option>
+            <option value="General Manger">General Manger</option>
+            <option value="HR manager">HR manager</option>
+            <option value="Team Leader">Team Leader</option>
+        </select>
+        <span id="designationerror" class="spanHide"></span>
+        <br><br><br>
+        <label for="empcode">Employee Code</label>
+        <input type="text" id="empcode" >
+        <span id="empcodeerror" class="spanHide"></span>        
+        <br><br>
+        <label for="bloodgroup">Blood Group</label>
+        <select name="bloodgroup" id="bloodgroup">
+            <option value=""></option>
+            <option value="A1+ve">A1+ve</option>
+            <option value="B+ve">B+ve</option>
+            <option value="B-ve">B-ve</option>
+            <option value="universal">universal</option>
+        </select>
+        <span id="bloodgrouperror" class="spanHide"></span>
+        <br><br><br>
+        <label for="joiningdate">Joining Date</label>
+        <input type="date" id="joiningdate">
+        <span id="dateError" class="spanHide"></span>
+        <br><br>
+        <label for="email">email(virtusa)</label>
+        <input type="email" id="email"> 
+        <span id="emailerror" class="spanHide"></span>
+        <br><br><br>
+        <label for="mobnum">Mobile Number</label>
+        <input type="text" id="mobnum">
+        <span id="mobnumerror" class="spanHide"></span>
+        <br><br><br>
+        <label for="emernum">Emergency Number</label>
+        <input type="text" id="emernum">
+        <span id="emernumerror" class="spanHide"></span>
+        <br><br>
+        <button type="button" id="submitting" onClick="formSubmit()">submit</button>       
+    </form>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/main.js"></script>
+</html>
