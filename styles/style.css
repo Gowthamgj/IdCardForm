@@ -4,3 +4,16 @@
 .spanHide{
     display: none;
 }
+.container{
+    width:30%;
+}
+.firstname,.glyphicon{
+    position: absolute;
+    padding: 25px;
+}
+.glyphicon-remove{
+    color: red;
+}
+.glyphicon-ok{
+    color:green;
+}

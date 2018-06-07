@@ -4,24 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>EmployeeIdForm</title>
 </head>
 <body>
     <h1 id="header">Employee ID Card Form</h1>
-    <form novalidate>
-        <label for="firstname">First Name</label>
-        <input type="text" name="firstname" id="firstname">
-        <span id="firstNameError" class="spanHide"></span>
+    <form novalidate class="container">
+        <div style="position: relative">
+            <label for="firstname" id="lfname">First Name</label>
+            <input type="text" class="form-control" name="firstname" id="firstname">
+            <i class="glyphicon glyphicon-remove form-control-feedback wrong" id="firstError"></i>
+            <i class="glyphicon glyphicon-ok form-control-feedback tick" id="firstError"></i>           
+        </div>
+        <br>
+        <div id="firstNameError" class="spanHide"></div>
         <br><br>
-        <label for="fullname">Full Name</label>
-        <input type="text" name="fullname" id="fullname">
+        <div style="position: relative;">
+            <label for="fullname">Full Name</label>
+            <input type="text" class="form-control"  name="fullname" id="fullname">
+            <i class="glyphicon glyphicon-remove form-control-feedback fullwrong" ></i>
+            <i class="glyphicon glyphicon-ok form-control-feedback fulltick "></i> 
+        </div>
         <span id="fullNameError" class="spanHide"></span>
         <br><br>
         <label for="desination">Designation</label>
-        <select name="designation" id="designation">
+        <select name="designation" class="form-control" id="designation">
             <option value=""></option>
             <option value="Associate Engineer">Associate Engineer</option>
             <option value="General Manger">General Manger</option>
@@ -31,11 +41,11 @@
         <span id="designationerror" class="spanHide"></span>
         <br><br><br>
         <label for="empcode">Employee Code</label>
-        <input type="text" id="empcode" >
+        <input type="text" class="form-control" id="empcode" >
         <span id="empcodeerror" class="spanHide"></span>        
         <br><br>
         <label for="bloodgroup">Blood Group</label>
-        <select name="bloodgroup" id="bloodgroup">
+        <select name="bloodgroup" class="form-control" id="bloodgroup">
             <option value=""></option>
             <option value="A1+ve">A1+ve</option>
             <option value="B+ve">B+ve</option>
@@ -45,19 +55,19 @@
         <span id="bloodgrouperror" class="spanHide"></span>
         <br><br><br>
         <label for="joiningdate">Joining Date</label>
-        <input type="date" id="joiningdate">
+        <input type="date" class="form-control" id="joiningdate">
         <span id="dateError" class="spanHide"></span>
         <br><br>
         <label for="email">email(virtusa)</label>
-        <input type="email" id="email"> 
+        <input type="email" class="form-control" id="email"> 
         <span id="emailerror" class="spanHide"></span>
         <br><br><br>
         <label for="mobnum">Mobile Number</label>
-        <input type="text" id="mobnum">
+        <input type="text" class="form-control" id="mobnum">
         <span id="mobnumerror" class="spanHide"></span>
         <br><br><br>
         <label for="emernum">Emergency Number</label>
-        <input type="text" id="emernum">
+        <input type="text" class="form-control" id="emernum">
         <span id="emernumerror" class="spanHide"></span>
         <br><br>
         <button type="button" id="submitting" onClick="formSubmit()">submit</button>       
