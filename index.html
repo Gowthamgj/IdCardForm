@@ -13,7 +13,7 @@
 <body>
     <h1 id="header">Employee ID Card Form</h1>
     <form novalidate class="container">
-        <div style="position: relative">
+        <div id="iddiv">
             <label for="firstname" id="lfname">First Name</label>
             <input type="text" class="form-control" name="firstname" id="firstname">
             <i class="glyphicon glyphicon-remove form-control-feedback wrong" id="firstError"></i>
@@ -22,7 +22,7 @@
         <br>
         <div id="firstNameError" class="spanHide"></div>
         <br><br>
-        <div style="position: relative;">
+        <div id="iddiv">
             <label for="fullname">Full Name</label>
             <input type="text" class="form-control"  name="fullname" id="fullname">
             <i class="glyphicon glyphicon-remove form-control-feedback fullwrong" ></i>
@@ -30,19 +30,25 @@
         </div>
         <span id="fullNameError" class="spanHide"></span>
         <br><br>
+        <div>
         <label for="desination">Designation</label>
-        <select name="designation" class="form-control" id="designation">
-            <option value=""></option>
-            <option value="Associate Engineer">Associate Engineer</option>
-            <option value="General Manger">General Manger</option>
-            <option value="HR manager">HR manager</option>
-            <option value="Team Leader">Team Leader</option>
-        </select>
+            <select name="designation" class="form-control" id="designation">
+                <option value=""></option>
+                <option value="Associate Engineer">Associate Engineer</option>
+                <option value="General Manger">General Manger</option>
+                <option value="HR manager">HR manager</option>
+                <option value="Team Leader">Team Leader</option>
+            </select>
+        </div>
         <span id="designationerror" class="spanHide"></span>
         <br><br><br>
-        <label for="empcode">Employee Code</label>
-        <input type="text" class="form-control" id="empcode" >
-        <span id="empcodeerror" class="spanHide"></span>        
+        <div id="iddiv">
+            <label for="empcode">Employee Code</label>
+            <input type="text" class="form-control" id="empcode" >
+            <i class="glyphicon glyphicon-remove form-control-feedback empwrong" ></i>
+            <i class="glyphicon glyphicon-ok form-control-feedback emptick "></i> 
+        </div>
+        <div id="empcodeerror" class="spanHide"></div>        
         <br><br>
         <label for="bloodgroup">Blood Group</label>
         <select name="bloodgroup" class="form-control" id="bloodgroup">
@@ -58,19 +64,31 @@
         <input type="date" class="form-control" id="joiningdate">
         <span id="dateError" class="spanHide"></span>
         <br><br>
-        <label for="email">email(virtusa)</label>
-        <input type="email" class="form-control" id="email"> 
-        <span id="emailerror" class="spanHide"></span>
+        <div id="iddiv">
+            <label for="email">email(virtusa)</label>
+            <input type="email" class="form-control" id="email"> 
+            <i class="glyphicon glyphicon-remove form-control-feedback emailwrong" ></i>
+            <i class="glyphicon glyphicon-ok form-control-feedback emailtick "></i> 
+        </div>
+        <div id="emailerror" class="spanHide"></div>
         <br><br><br>
-        <label for="mobnum">Mobile Number</label>
-        <input type="text" class="form-control" id="mobnum">
+        <div id="iddiv">
+            <label for="mobnum">Mobile Number</label>
+            <input type="text" class="form-control" id="mobnum">
+            <i class="glyphicon glyphicon-remove form-control-feedback mobwrong" ></i>
+            <i class="glyphicon glyphicon-ok form-control-feedback mobtick "></i> 
+        </div>
         <span id="mobnumerror" class="spanHide"></span>
         <br><br><br>
-        <label for="emernum">Emergency Number</label>
-        <input type="text" class="form-control" id="emernum">
+        <div id="iddiv">
+            <label for="emernum">Emergency Number</label>
+            <input type="text" class="form-control" id="emernum">
+            <i class="glyphicon glyphicon-remove form-control-feedback emerwrong" ></i>
+            <i class="glyphicon glyphicon-ok form-control-feedback emertick "></i> 
+        </div>
         <span id="emernumerror" class="spanHide"></span>
         <br><br>
-        <button type="button" id="submitting" onClick="formSubmit()">submit</button>       
+        <button type="button" class="btn btn-success" id="submitting" onClick="formSubmit()">submit</button>       
     </form>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
