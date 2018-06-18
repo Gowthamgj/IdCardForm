@@ -27,14 +27,17 @@ function firstNameCheck(){
     if(name==""){
         addErrorMessage("firstNameError","firstname","first name cant be null");
         valid.isValid=1; 
-        $(".tick").hide();
-        $(".wrong").show()
-        gly
+        // $(".tick").hide();
+        // $(".wrong").show();
+        glyphAddError("tick","wrong");
+        
     }
     else{
         removeErrorMessage("firstname","firstNameError");
-        $(".wrong").hide();
-        $(".tick").show();
+        // $(".wrong").hide();
+        // $(".tick").show();
+        glyphRemError("tick","wrong");
+        
     }
 }
 function fullNameCheck(){
@@ -65,13 +68,15 @@ function designationCheck(){
 }
 function employeeCodeCheck(){
     formvalue=$("#empcode").val();
-    var match=formvalue.match(/[0-9]{6,7}/);
+    var match=formvalue.match(/[0-9]{6}/);
     if(match==null){
         addErrorMessage("empcodeerror","empcode","empcode does not consist of alphabets");
+        glyphAddError("emptick","empwrong");
         valid.isValid=1;         
     }
     else{
         removeErrorMessage("empcode","empcodeerror");
+        glyphRemError("emptick","empwrong");   
     }
 }
 function bloodGroupCheck(){
@@ -99,10 +104,14 @@ function emailValidate(){
     var out=formvalue.match(/^[a-z|A-Z][a-z|A-Z|0-9|]+@virtusa.com/);
     if(out==null){
         addErrorMessage("emailerror","email","enter validate virtusa email id");
-        valid.isValid=1;               
+        valid.isValid=1;   
+        glyphAddError("emailtick","emailwrong");
+                    
     }
     else{
         removeErrorMessage("email","emailerror");
+        glyphRemError("emailtick","emailwrong");
+        
     }
 }
 function phoneNumValidate(){
@@ -110,19 +119,23 @@ function phoneNumValidate(){
     var out=formvalue.match(/^[1-9][0-9]{9}/);
     if(out==null){
         addErrorMessage("mobnumerror","mobnum","enter a valid mobile number");
-        valid.isValid=1;        
+        valid.isValid=1;    
+        glyphAddError("mobtick","mobwrong");       
     }
     else{
         removeErrorMessage("mobnum","mobnumerror");
+        glyphRemError("mobtick","mobwrong");   
     }
     formvalue=$("#emernum").val();
     out=formvalue.match(/^[1-9][0-9]{9}/);
     if(out==null){
         addErrorMessage("emernumerror","emernum","enter a valid mobile number");
+        glyphAddError("emertick","emerwrong");    
         valid.isValid=1;           
     }
     else{
         removeErrorMessage("emernum","emernumerror");
+        glyphRemError("emertick","emerwrong");           
     }
 }
 function insertIntoFire(){
